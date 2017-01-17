@@ -1,0 +1,38 @@
+QA Plan for iTunes Search API
+-----------------------------
+
+Prepare, execute and document test cases, listed below.
+
+Here are few (both positive and negative) test cases, which should cover testing of the following end points:
+- Submit the following URL: https://itunes.apple.com/search?term='free_text', where the values of free_text constitutes different test subcases.
+- Submit above URL with free_text having at least 2 words as its value.  Words should be separated by a '+' sign.  Provide a screenshot of result.
+- Submit above URL with free_text having at least 2 words as its value.  As a word separator use all special charachters, defined in the 'terms' row / 'Value' column of the Parameters table.  Provide a screenshot of result.
+- Submit above URL with free_text having at least N (value of N should be increased.  Record at which N value the stest fails) words as its value.  As a word separator use all special charachters, defined in the 'terms' row / 'Value' column of the Parameters table. Parameters table of the   Provide a screenshot of result.
+- Submit the following URL: https://itunes.apple.com/search?term='free_text'&country='country_code', where the values of free_text and country_code constitute different test subcases.
+- Submit above URL with country_code having a default 'US' code as its value.  Provide a screenshot of result.
+- Submit above URL with country_code having several non-default codes as its value.  Provide a screenshot of result.
+- Submit above URL with country_code having a single character as its value.  Provide a screenshot of result.
+- Submit above URL with country_code having a three (four) character as its value.  Provide a screenshot of result.
+- Submit above URL with country_code having an empty value.  Provide a screenshot of result.
+- Submit the following URL: https://itunes.apple.com/search?term='free_text'&media='media_val', where the values of free_text and media_val constitutes different test subcases.
+- Submit above URL with media_val having a default 'all' value.  Provide a screenshot of result.
+- Submit above URL with media_val having every value defined in the 'media' row / 'Value' column of the Parameters table.  Provide a screenshot of result.
+- Submit above URL with media_val having an empty value.  Provide a screenshot of result.
+- Submit above URL with media_val having any value, not defined in the 'media' row / 'Value' column of the Parameters table.  Provide a screenshot of result.
+- Submit the following URL: https://itunes.apple.com/search?term='free_text'&limit='limit_val', where the values of free_text and limit_val constitute different test subcases.
+- Submit above URL with limit_val having a value of 100.  Provide a screenshot of result.
+- Submit above URL with limit_val having a value of 1.  Provide a screenshot of result.
+- Submit above URL with limit_val having a value of 200.  Provide a screenshot of result.
+- Submit above URL with limit_val having a value of less than 1.  Provide a screenshot of result.
+- Submit above URL with limit_val having a value of more than 200.  Provide a screenshot of result.
+- Submit above URL with limit_val having a non integer value.  Provide a screenshot of result.
+- Submit above URL with limit_val having an alpha (non numeric) value.  Provide a screenshot of result.
+- Submit above URL with limit_val having an empty value.  Provide a screenshot of result.
+- Repeat all above cases with limit_val having a '-' sign in ront of its value.  Provide a screenshot of result.
+- Submit the following URL: https://itunes.apple.com/search?term='free_text'&country='country_code'&media='media_val&limit='limit_val', where the values of free_text, country_code, media_val and limit_val constitute different test subcases.
+- Submit above URL with free_text having every value from above test cases.  Provide screenshots of results.
+- Submit above URL with country_code having every value from above test cases.  Provide screenshots of results.
+- Submit above URL with media_val having every value from above test cases.  Provide screenshots of results.
+- Submit above URL with limit_val having every value from above test cases.  Provide screenshots of results.
+- Submit the following URL: https://itunes.apple.com/search? . Provide a screenshot of result.
+- Submit the following URL: https://itunes.apple.com/search?name=value . Provide a screenshot of result.
